@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card, CardContent, Typography, CircularProgress } from "@mui/material";
 import useWebSocket from "../../hooks/WebSocket";
 
 const Dashboard: React.FC = () => {
-    const sensorData = useWebSocket("ws://192.168.1.100:81");
+    const sensorData = useWebSocket("ws://192.168.9.111:81");
     // const sensorData = {
     //     temperature: 36.2,
     //     humidity: 58,
     // }
+    useEffect(() => (
+        console.log(sensorData)
+       ))
 
     return (
         <div style={{
@@ -28,8 +31,8 @@ const Dashboard: React.FC = () => {
                 <Card sx={{ minWidth: 250, textAlign: "center", padding: 2 }}>
                     <CardContent>
                         <Typography variant="h6">Temperatura</Typography>
-                        {sensorData ? (
-                            <Typography variant="h4" color="primary">{sensorData.temperature.toFixed(1)}°C</Typography>
+                        {sensorData.data ? (
+                            <Typography variant="h4" color="primary">{sensorData.data?.temperature.toFixed(1)}°C</Typography>
                         ) : (
                             <CircularProgress />
                         )}
@@ -38,8 +41,8 @@ const Dashboard: React.FC = () => {
                 <Card sx={{ minWidth: 250, textAlign: "center", padding: 2 }}>
                     <CardContent>
                         <Typography variant="h6">Umidade</Typography>
-                        {sensorData ? (
-                            <Typography variant="h4" color="secondary">{sensorData.humidity.toFixed(1)}%</Typography>
+                        {sensorData.data ? (
+                            <Typography variant="h4" color="secondary">{sensorData.data?.humidity.toFixed(1)}%</Typography>
                         ) : (
                             <CircularProgress />
                         )}
