@@ -1,55 +1,88 @@
-# React + TypeScript + Vite
+# **Aplicação Web para Monitoramento e Controle Remoto**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém a aplicação web desenvolvida para monitorar e controlar remotamente o sistema embarcado. A interface permite visualizar em tempo real os valores lidos pelos sensores de temperatura e umidade do solo, integrados ao projeto final.
 
-Currently, two official plugins are available:
+- **Repositório do Projeto Embarcado**: [EMBARCADOS_2025](https://github.com/jeremiasmarques/EMBARCADOS_2025)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## **Funcionalidades**
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Monitoramento em Tempo Real**:
+  - Visualização dos valores de temperatura lidos pelo sensor **DS18B20**.
+  - Visualização dos valores de umidade do solo lidos pelo sensor **S12**.
+  - Comunicação em tempo real com o ESP32 via WebSocket.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Interface Amigável**:
+  - Desenvolvida com **React** e **Material-UI (MUI)** para uma experiência de usuário moderna e responsiva.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **Integração com o Sistema Embarcado**:
+  - Comunicação com o ESP32 via WebSocket para receber os dados dos sensores.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# embarcados-web
+## **Tecnologias Utilizadas**
+
+- **Frontend**:
+  - [React](https://reactjs.org/) (v19.0.0) - Biblioteca para construção de interfaces de usuário.
+  - [Material-UI (MUI)](https://mui.com/) (v6.4.6) - Biblioteca de componentes UI para React.
+  - [React Router DOM](https://reactrouter.com/) (v7.2.0) - Gerenciamento de rotas na aplicação.
+
+---
+
+## **Configuração do Ambiente**
+
+### **Pré-requisitos**
+
+- **Node.js**: Certifique-se de ter o Node.js instalado (versão 18 ou superior).
+  - [Download Node.js](https://nodejs.org/)
+
+### **Instalação**
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/diegoCBorba/embarcados-web.git
+   cd embarcados-web
+   ```
+
+2. Instale as dependências do projeto:
+   ```bash
+   npm install
+   ```
+
+3. Configure o ambiente:
+   - Crie um arquivo `.env` na raiz do projeto e adicione as variáveis de ambiente necessárias (se aplicável).
+
+---
+
+## **Executando o Projeto**
+
+1. Inicie o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+2. Acesse a aplicação no navegador:
+   - Abra [http://localhost:5173](http://localhost:5173) (ou a porta indicada no terminal).
+
+3. Para build de produção:
+   ```bash
+   npm run build
+   ```
+
+4. Para visualizar o build de produção localmente:
+   ```bash
+   npm run preview
+   ```
+
+---
+
+## **Estrutura do Projeto**
+
+- **`src/`**: Contém o código-fonte da aplicação.
+  - **`hooks/`**: Lógica para comunicação via WebSocket do sistema embarcado.
+  - **`layout/`**: Layout da aplicação.
+  - **`pages/`**: Páginas da aplicação.
+  - **`routes/`**: Configuração das rotas. 
+  - **`App.tsx`**: Componente principal da aplicação.
+  - **`main.tsx`**: Ponto de entrada da aplicação.
