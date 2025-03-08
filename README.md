@@ -3,6 +3,7 @@
 Este repositório contém a aplicação web desenvolvida para monitorar e controlar remotamente o sistema embarcado. A interface permite visualizar em tempo real os valores lidos pelos sensores de temperatura e umidade do solo, integrados ao projeto final.
 
 - ### Link para a documentação detalhada do nosso projeto: [DOCUMENTAÇÃO](https://academico-ifpb-edu-1.gitbook.io/projeto-embarcados)
+- **Repositório do Projeto Embarcado**: [EMBARCADOS_2025](https://github.com/jeremiasmarques/EMBARCADOS_2025)
 
 # Equipe do Projeto:
 
@@ -127,7 +128,3 @@ Este repositório contém a aplicação web desenvolvida para monitorar e contro
   - **`routes/`**: Configuração das rotas. 
   - **`App.tsx`**: Componente principal da aplicação.
   - **`main.tsx`**: Ponto de entrada da aplicação.
-
----
-
-- **Repositório do Projeto Embarcado**: [EMBARCADOS_2025](https://github.com/jeremiasmarques/EMBARCADOS_2025)
