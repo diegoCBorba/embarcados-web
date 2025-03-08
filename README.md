@@ -4,7 +4,48 @@ Este repositório contém a aplicação web desenvolvida para monitorar e contro
 
 - ### Link para a documentação detalhada do nosso projeto: [DOCUMENTAÇÃO](https://academico-ifpb-edu-1.gitbook.io/projeto-embarcados)
 
----
+# Equipe do Projeto:
+
+<div style="display: inline_block;">
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/diegoCBorba" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/90847079?v=4" width="100px;" alt="Avatar Matheus"/><br>
+        <sub>
+          <b>Diego Cardoso</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/jeremiasmarques" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/90351007?v=4" width="100px;" alt="Avatar Rafael"/><br>
+        <sub>
+          <b>Jeremias Marques</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/MteusBraga" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/93921419?v=4" width="100px;" alt="Avatar Thiago"/><br>
+        <sub>
+          <b>Mateus Braga</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ThiagoMathe" target="_blank">
+        <img src="https://avatars.githubusercontent.com/u/89406106?v=4" width="100px;" alt="Avatar Thiago"/><br>
+        <sub>
+          <b>Thiago Matheus</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+</div>
 
 ## **Funcionalidades**
 
